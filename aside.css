@@ -112,7 +112,9 @@
 }
 
 .closemenubutton:hover>.bar1,
-.closemenubutton:hover>.bar3 {
+.closemenubutton:hover>.bar3,
+.closed .closemenubutton>.bar1,
+.closed .closemenubutton>.bar3 {
     position: absolute;
 
     width: var(--transform-width);
@@ -123,21 +125,20 @@
     transform: rotate(-45deg);
 }
 
-.closemenubutton:hover>.bar3 {
+.closemenubutton:hover>.bar3{
     transform: rotate(45deg);
 }
 
-/* when already closed... */
-.closed .closemenubutton:hover>.bar1 {
-    transform: rotate(45deg);
-}
-
-.closed .closemenubutton:hover>.bar3 {
-    transform: rotate(-45deg);
-}
-
-.closemenubutton:hover>.bar2 {
+.closemenubutton:hover>.bar2, .closed .closemenubutton>.bar2 {
     opacity: 0;
+}
+
+.closed .closemenubutton>.bar1 {
+    transform: rotate(45deg);
+}
+
+.closed .closemenubutton>.bar3 {
+    transform: rotate(-45deg);
 }
 
 .closemenubutton>* {
