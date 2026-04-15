@@ -1,0 +1,13 @@
+{
+    "name": "Attributes",
+    "description": "Provides functionality for defining and using attributes in PHP. Attributes are a form of metadata that can be added to classes, methods, properties, and parameters to provide additional information about their behavior or characteristics. This package allows developers to create custom attributes and use them to enhance the functionality of their code.",
+    "version": "1.0.0",
+    "type": "library",
+    "autoload": [
+        "attributes.php"
+    ],
+    "require": {
+        "php": "^8.0",
+        "composer": "1.3.0"
+    }
+}

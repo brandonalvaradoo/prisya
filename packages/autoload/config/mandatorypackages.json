@@ -1,0 +1,8 @@
+{
+    "autoload_application_mandatory_packages":
+    [
+        "/packages/composer/config/main.php",
+        "/router/config/main.php",
+        "/packages/scry/run.php"
+    ]
+}

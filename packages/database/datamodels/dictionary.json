@@ -1,0 +1,8 @@
+{
+    "User": "Users",
+    "Session": "Users",
+    "PathTrace": "PathsTrace",
+    "RegisteredGenerationPerson": "registered_generation_people",
+    "PersonType": "person_types",
+    "AccessCode": "access_codes"
+}

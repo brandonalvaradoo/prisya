@@ -1,0 +1,19 @@
+{
+    "local" : 
+    {
+        "host": "localhost",
+        "username": "root",
+        "password": "",
+        "database": "if0_38552842_nitro",
+        "faildie": true
+    },
+
+    "server" :
+    {
+        "host": "sql309.infinityfree.com",
+        "username": "if0_38552842",
+        "password": "XIeqNj3CdpimSv",
+        "database": "if0_38552842_nitro",
+        "faildie": true
+    }
+}

@@ -1,0 +1,175 @@
+/* Aside menu */
+.aside {
+    width: 175px;
+    position: sticky;
+
+    transition: width 0.5s ease-in-out;
+}
+
+.aside.closed {
+    width: 40px;
+}
+
+.aside.closed .menuitemtext {
+    opacity: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #0d7eff;
+    border-radius: 0 1em 1em 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.menuitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+
+    gap: 0.5em;
+    padding: 0.5em;
+}
+
+.menuitem.current::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #1472dd;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+}
+
+.menuicon {
+    fill: #fff;
+    flex-shrink: 0;
+
+    max-width: 24px;
+    max-height: 24px;
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+}
+
+.menuitemtext {
+    color: #fff;
+    font-weight: 600;
+    z-index: 1;
+
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Menu header */
+
+.menuheader {
+    display: flex;
+    flex-direction: row;
+    padding: 1em .5em;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.closed .menuappname {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.closemenubutton {
+    --button-width: 1.5em;
+    --button-height: 1.25em;
+    --separation: .2em;
+    --transform-width: calc(var(--button-height) / 1.4142135);
+    --mid-height: calc(var(--button-height) * 0.707106781);
+    --bar-height: calc((var(--button-height) - 2 * var(--separation)) / 3);
+
+    /* Style reset */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    width: var(--button-width);
+    height: var(--button-height);
+    position: relative;
+}
+
+.closemenubutton:hover>.bar1,
+.closemenubutton:hover>.bar3 {
+    position: absolute;
+
+    width: var(--transform-width);
+    left: calc((var(--button-width) - var(--mid-height)) / 2);
+}
+
+.closemenubutton:hover>.bar1 {
+    transform: rotate(-45deg);
+}
+
+.closemenubutton:hover>.bar3 {
+    transform: rotate(45deg);
+}
+
+/* when already closed... */
+.closed .closemenubutton:hover>.bar1 {
+    transform: rotate(45deg);
+}
+
+.closed .closemenubutton:hover>.bar3 {
+    transform: rotate(-45deg);
+}
+
+.closemenubutton:hover>.bar2 {
+    opacity: 0;
+}
+
+.closemenubutton>* {
+    background-color: #0d7eff;
+    border-radius: 32px;
+    width: 100%;
+    height: var(--bar-height);
+    transform-origin: center;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.closemenubutton>.bar2,
+.bar3 {
+    margin-top: var(--separation);
+}
+
+.menuappname {
+    font-family: 'Exo 2', sans-serif;
+    font-style: italic;
+    font-size: 1.25em;
+}
+
+/* Stretch screens */
+@media (max-width: 600px) {
+    .aside {
+        width: 40px;
+    }
+
+    .menuappname {
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+}

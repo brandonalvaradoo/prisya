@@ -1,0 +1,13 @@
+{
+    "name": "Scry",
+    "description": "",
+    "version": "1.0.0",
+    "type": "library",
+    "autoload": [
+        "run.php"
+    ],
+    "require": {
+        "php": "^8.0",
+        "composer": "1.3.0"
+    }
+}

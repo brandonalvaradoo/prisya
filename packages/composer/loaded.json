@@ -1,0 +1,7 @@
+{
+    "composer": "/packages/composer/",
+    "database": "/packages/database/",
+    "attributes": "/packages/attributes/",
+    "scry": "/packages/scry/",
+    "apimanage": "/packages/apimanage/"
+}

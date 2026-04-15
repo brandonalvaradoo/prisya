@@ -1,0 +1,15 @@
+{
+    "views/*" :
+    {
+        "/" : "home",
+        "user/id/:id/" : "userprofile",
+        "accesscard/:id" : "accesscard"
+    },
+
+    "private/" :
+    {
+        "servidor/": "servidor",
+        "ingresar/:tempuser_id/": "ingresar",
+        "authenticate/": "authenticate"
+    }
+}

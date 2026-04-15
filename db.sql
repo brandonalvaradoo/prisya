@@ -1,0 +1,6 @@
+CREATE DATABASE pris;
+USE pris;
+
+CREATE TABLE products(
+	id INT PRIMARY KEY NOT NULL
+);

@@ -1,0 +1,20 @@
+{
+    "index": "database.php",
+    "dependencies_requirement_mode": "include_once",
+
+    "project": {
+        "dependencies": [],
+        "scope": {
+            "root": "this",
+            "fill": "tree",
+            "included": ["datafetch.php", "datamodel.php"]
+        }
+    },
+
+
+    "module" : {
+        "name": "database",
+        "exports": "all",
+        "version": "^"
+    }
+}
